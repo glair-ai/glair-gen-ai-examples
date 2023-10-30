@@ -1,3 +1,3 @@
 # glair-genai-examples
 
-Contain examples for SDK of Gen AI project.
+Contains examples for SDK of Gen AI project.

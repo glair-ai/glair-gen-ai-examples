@@ -1,0 +1,17 @@
+name: example-inference-orchestrator
+channels:
+  - defaults
+dependencies:
+    - python=3.9.13
+    - pip=23.3
+    - pip:
+      - black
+      - coverage
+      - flake8
+      - isort
+      - pytest
+      - pre-commit
+      - sphinx
+      - python-magic
+      - pylint
+      - -r requirements.txt

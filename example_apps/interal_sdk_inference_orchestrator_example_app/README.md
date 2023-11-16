@@ -7,10 +7,9 @@
 ## Setup
 Here's a brief explanation of how to run the [Internal SDK Inference Orchestrator](https://github.com/GDP-ADMIN/glair-genai-experiments-and-explorations) example app:
 
-1. **Install requirements**: 
+1. **Install requirements**:
    1. Create local enviroment `conda env create -f environment.yml`.
-   1. Install [Internal SDK](https://github.com/GDP-ADMIN/glair-genai-experiments-and-explorations)
-   2.  Install the dependencies via `pip install -r requirements.txt`.
+   2.  Install the dependencies via `pip install -r requirements.txt`. Make sure you have access to this [Internal SDK](https://github.com/GDP-ADMIN/glair-genai-experiments-and-explorations) repository.
 2. **Set environment variables**:
    1. Create a file named `.env` and place the required information there.
    2. Check `.env-example` for the values.

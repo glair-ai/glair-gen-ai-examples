@@ -6,8 +6,8 @@
         }
     },
     "llm_params": {
-        "max_tokens": 10,
-        "temperature": 0.5,
+        "max_tokens": 512,
+        "temperature": 0.0,
         "top_p": 0.14,
         "n": 1
     },
@@ -15,7 +15,7 @@
         "model_max_input_token": 200,
         "model_max_context_token": 2500,
         "topic": "state-of-the-union",
-        "search_threshold": 0.75,
-        "search_top_k": 3
+        "search_threshold": 0.5,
+        "search_top_k": 10
     }
 }

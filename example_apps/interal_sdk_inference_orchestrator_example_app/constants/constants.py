@@ -12,10 +12,7 @@ References:
 """
 import os
 
-from glair_genai_sdk.inference_orchestrator.constant.constants import (
-    ConfigParameters,
-    UseCaseHandlerConstants,
-)
+from glair_genai_sdk.inference_orchestrator.constant.constants import ConfigParameters, UseCaseHandlerConstants
 
 
 class EnvironmentVariables:
@@ -27,8 +24,8 @@ class EnvironmentVariables:
         OPENAI_MODEL_NAME (str): Key to retrieve the OpenAI model name from environment variables.
         OPENAI_EMBEDDING_NAME (str): Key to retrieve the OpenAI embedding name from environment variables.
         OPENAI_API_KEY (str): Key to retrieve the OpenAI API key from environment variables.
-        CHROMA_VECTOR_DB_PERSIST_DIRECTORY (str): Key to get the path to the persist directory of the Chroma vector database
-                                           from environment variables to load the vector database.
+        CHROMA_VECTOR_DB_PERSIST_DIRECTORY (str): Key to get the path to the persist directory of the Chroma
+                                            vector database from environment variables to load the vector database.
     """
 
     API_HOSTNAME = "API_HOSTNAME"
@@ -89,12 +86,12 @@ class ExampleInferenceOrchestratorAPIConstant:
 
     Attributes:
         GENERATE_RESPONSE_ROUTE (str): The path of the API endpoint for generating responses from the model.
-        GET_PARAM_ROUTE (str): The path of the API endpoint for retrieving model hyperparameters.
+        GET_PARAM_ROUTE (str): The path of the API endpoint for retrieving model configuraions.
         METHODS_GET (List[str]): List of HTTP methods supported for GET requests.
         METHODS_POST (List[str]): List of HTTP methods supported for POST requests.
         PARAM_MESSAGE (str): Key used to retrieve the message from the request.
         RESPONSE_MIMETYPE (str): MIME type for the API response.
-        UPDATE_PARAM_ROUTE (str): The path of the API endpoint for updating model hyperparameters.
+        UPDATE_PARAM_ROUTE (str): The path of the API endpoint for updating model configuraions.
         HEALTH_CHECK (str): Endpoint for health check.
     """
 
@@ -108,7 +105,7 @@ class ExampleInferenceOrchestratorAPIConstant:
     HEALTH_CHECK = "/health-check"
 
 
-class ExampleInferenceOrchestratorAPIMessage:
+class APIMessage:
     """Class used to define the constants for API message.
 
     Attributes:
@@ -141,8 +138,9 @@ CONFIG_DESCRIPTION = {
         UseCaseHandlerConstants.TOPIC: "The selected topic used by the model to answer the given question.",
         UseCaseHandlerConstants.SEARCH_THRESHOLD: "The minimum similarity probability between 0-1 for a document "
         "used as the context",
-        UseCaseHandlerConstants.SEARCH_TOP_K: "The maximum number of retrieved documents when performing similarity search.",
-    }
+        UseCaseHandlerConstants.SEARCH_TOP_K: "The maximum number of retrieved documents when performing "
+        "similarity search.",
+    },
 }
 
 
@@ -162,7 +160,7 @@ CONFIG_TYPE = {
         UseCaseHandlerConstants.TOPIC: "text",
         UseCaseHandlerConstants.SEARCH_THRESHOLD: "float",
         UseCaseHandlerConstants.SEARCH_TOP_K: "int",
-    }
+    },
 }
 
 

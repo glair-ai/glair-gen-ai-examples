@@ -5,7 +5,7 @@
 - Miniconda
 
 ## Setup
-Here's the brief explanation on how to run the Internal SDK Inference Orchestrator example App:
+Here's a brief explanation of how to run the [Internal SDK Inference Orchestrator](https://github.com/GDP-ADMIN/glair-genai-experiments-and-explorations) example app:
 
 1. **Install requirements**: 
    1. Create local enviroment `conda env create -f environment.yml`.

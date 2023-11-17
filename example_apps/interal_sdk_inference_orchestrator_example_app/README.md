@@ -1,7 +1,7 @@
 # Internal SDK Inference Orchestrator example App
 
 ## Requirements
-- Python 3.9+
+- Python 3.10+
 - Miniconda
 
 ## Setup
@@ -13,7 +13,6 @@ Here's a brief explanation of how to run the [Internal SDK Inference Orchestrato
 2. **Set environment variables**:
    1. Create a file named `.env` and place the required information there.
    2. Check `.env-example` for the values.
-   3. Ask `kevin.yauris@gdplabs.id` or `moch.n.r.nasril@gdplabs.id` or for more information to fill the values.
 3. **Set configuration file**:
    1. Please note that there is a configuration file at `configs/default_openai_llm_config.json`. This config is intended for the use of the OpenAI model. You can adjust it according to your needs, including the PromptTemplate, LLM HyperParameter, and UseCaseHandler configs.
 4. **Start server**: `python app.py`.

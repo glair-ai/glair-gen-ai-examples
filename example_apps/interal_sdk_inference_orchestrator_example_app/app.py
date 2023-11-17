@@ -41,6 +41,9 @@ from langchain.embeddings import OpenAIEmbeddings
 app = Flask(__name__)
 CORS(app)
 
+# Load `.env`
+load_dotenv()
+
 # Intitialize embedding model
 embedder = OpenAIEmbeddings(
     model=ExampleInferenceOrchestratorEnvironmentVariables.embedding_name(),
@@ -179,11 +182,19 @@ def update_config() -> Dict[str, str]:
     try:
         json_data = request.get_json()
         current_configs = load_config(config_path=DEFAULT_CONFIG_PATH)
-        for key1, val1 in current_configs.items():
-            if key1 in json_data:
-                for key2 in val1.keys():
-                    if key2 in json_data[key1]:
-                        current_configs[key1][key2] = json_data[key1][key2]
+        missing_keys = [key for key in json_data if key not in current_configs]
+        if missing_keys:
+            raise ValueError(f"Keys not found in current configuration: {missing_keys}")
+
+        for key, values in json_data.items():
+            if key in current_configs:
+                for sub_key, sub_value in values.items():
+                    if sub_key in current_configs[key]:
+                        current_configs[key][sub_key] = sub_value
+                    else:
+                        raise ValueError(
+                            "Sub-key '{}' not found in '{}' of current configuration.".format(sub_key, key)
+                        )
 
         save_config(DEFAULT_CONFIG_PATH, current_configs)
         llm.update_hyperparameter_from_json(DEFAULT_CONFIG_PATH)
@@ -208,8 +219,5 @@ def run_server() -> None:
 
 
 if __name__ == "__main__":
-    # Load `.env`
-    load_dotenv()
-
     # Running Server
     run_server()

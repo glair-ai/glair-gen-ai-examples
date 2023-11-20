@@ -1,0 +1,21 @@
+{
+    "prompt_builder_params": {
+        "default_template": {
+            "template": "You're a chatbot that helps answering user questions.\nBelow are some context that can be used to answer the questions:\n```context\n{context}\n```\nGuidelines:\n1. Your task is to answer the user's question based on the conversation and context.\n2. Your answer must be in the same language as the question.\n3. You are only allowed to derive the answer from the provided context.\n4. If the question is irrelevant to the context, respond with an apology message stating that you can't answer the question as there is no relevant context.\n\nQUESTION: {question}",
+            "key_prompt_additional": {}
+        }
+    },
+    "llm_params": {
+        "max_tokens": 512,
+        "temperature": 0.0,
+        "top_p": 0.14,
+        "n": 1
+    },
+    "use_case_handler_params": {
+        "model_max_input_token": 200,
+        "model_max_context_token": 2500,
+        "topic": "state-of-the-union",
+        "search_threshold": 0.5,
+        "search_top_k": 10
+    }
+}

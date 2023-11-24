@@ -5,11 +5,14 @@
 - Miniconda
 
 ## Setup
-Here's a brief explanation of how to run the [Internal SDK Inference Orchestrator](https://github.com/GDP-ADMIN/glair-genai-experiments-and-explorations) example app:
+Here's a brief explanation of how to run the [Internal SDK Inference Orchestrator](https://github.com/GDP-ADMIN/gen-ai-internal-sdk) example app:
 
 1. **Install requirements**:
-   1. Create local enviroment `conda env create -f environment.yml`.
-   2.  Install the dependencies via `pip install -r requirements.txt`. Make sure you have access to this [Internal SDK](https://github.com/GDP-ADMIN/glair-genai-experiments-and-explorations) repository.
+   1. Change directory to the project root folder.
+   2. Install the glair-genai-sdk
+      1. Get your personal access token from [Github](https://github.com/settings/tokens).
+      2. Open terminal and run `export GH_TOKEN="<Your Personal Access Token>"`.
+   3. Run `conda env create -f environment.yml` or directly install the dependencies via `pip install -r requirements.txt`.
 2. **Set environment variables**:
    1. Create a file named `.env` and place the required information there.
    2. Check `.env-example` for the values.

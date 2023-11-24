@@ -119,3 +119,5 @@ condaenv.t1e302om.requirements.txt
 # local IDE stuffs
 .idea/*
 *.DS_Store
+**/logs/**
+**/src/**

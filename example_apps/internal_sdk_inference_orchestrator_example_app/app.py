@@ -30,12 +30,12 @@ from constants.constants import (
 from dotenv import load_dotenv
 from flask import Flask, Response, request
 from flask_cors import CORS, cross_origin
-from glair_genai_sdk.inference_orchestrator import FlowExecutor
-from glair_genai_sdk.inference_orchestrator.llm import Generator, OpenAILLM
-from glair_genai_sdk.inference_orchestrator.prompt import PromptBuilder
-from glair_genai_sdk.inference_orchestrator.search import ChromaVectorDB
-from glair_genai_sdk.inference_orchestrator.use_case import QAUseCaseHandler
-from glair_genai_sdk.inference_orchestrator.utility.utils import load_config, save_config
+from gdplabs_gen_ai.inference_orchestrator import FlowExecutor
+from gdplabs_gen_ai.inference_orchestrator.llm import Generator, OpenAILLM
+from gdplabs_gen_ai.inference_orchestrator.prompt import PromptBuilder
+from gdplabs_gen_ai.inference_orchestrator.search import ChromaVectorDB
+from gdplabs_gen_ai.inference_orchestrator.use_case import QAUseCaseHandler
+from gdplabs_gen_ai.inference_orchestrator.utility.utils import load_config, save_config
 from langchain.embeddings import OpenAIEmbeddings
 
 app = Flask(__name__)
@@ -154,8 +154,8 @@ def get_configs() -> Dict[str, Dict[str, Any]]:
         key1: {
             key2: {
                 ConfigField.CONFIG_FIELD_DEFAULT_VALUE: value2,
-                ConfigField.CONFIG_FIELD_TYPE: CONFIG_DESCRIPTION[key1][key2],
-                ConfigField.CONFIG_FIELD_DESCRIPTION: CONFIG_TYPE[key1][key2],
+                ConfigField.CONFIG_FIELD_TYPE: CONFIG_TYPE[key1][key2],
+                ConfigField.CONFIG_FIELD_DESCRIPTION: CONFIG_DESCRIPTION[key1][key2],
             }
             for key2, value2 in value1.items()
         }

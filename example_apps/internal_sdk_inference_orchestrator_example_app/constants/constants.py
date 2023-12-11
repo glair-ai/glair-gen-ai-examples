@@ -12,7 +12,7 @@ References:
 """
 import os
 
-from glair_genai_sdk.inference_orchestrator.constant.constants import ConfigParameters, UseCaseHandlerConstants
+from gdplabs_gen_ai.inference_orchestrator.constant.constants import ConfigParameters, UseCaseHandlerConstants
 
 
 class EnvironmentVariables:

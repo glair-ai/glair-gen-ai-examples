@@ -30,12 +30,12 @@ from constants.constants import (
 from dotenv import load_dotenv
 from flask import Flask, Response, request
 from flask_cors import CORS, cross_origin
-from glair_genai_sdk.inference_orchestrator import FlowExecutor
-from glair_genai_sdk.inference_orchestrator.llm import Generator, OpenAILLM
-from glair_genai_sdk.inference_orchestrator.prompt import PromptBuilder
-from glair_genai_sdk.inference_orchestrator.search import ChromaVectorDB
-from glair_genai_sdk.inference_orchestrator.use_case import QAUseCaseHandler
-from glair_genai_sdk.inference_orchestrator.utility.utils import load_config, save_config
+from gdplabs_gen_ai.inference_orchestrator import FlowExecutor
+from gdplabs_gen_ai.inference_orchestrator.llm import Generator, OpenAILLM
+from gdplabs_gen_ai.inference_orchestrator.prompt import PromptBuilder
+from gdplabs_gen_ai.inference_orchestrator.search import ChromaVectorDB
+from gdplabs_gen_ai.inference_orchestrator.use_case import QAUseCaseHandler
+from gdplabs_gen_ai.inference_orchestrator.utility.utils import load_config, save_config
 from langchain.embeddings import OpenAIEmbeddings
 
 app = Flask(__name__)

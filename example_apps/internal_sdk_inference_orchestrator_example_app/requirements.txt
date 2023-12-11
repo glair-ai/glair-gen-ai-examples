@@ -1,4 +1,4 @@
-git+https://${GH_TOKEN}@github.com/GDP-ADMIN/gen-ai-internal-sdk.git#egg=glair_genai_sdk
+git+https://${GH_TOKEN}@github.com/GDP-ADMIN/gen-ai-internal-sdk.git#egg=gdplabs_gen_ai
 flask==2.3.2
 flask_cors==4.0.0
 setuptools==65.5.1

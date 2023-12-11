@@ -154,8 +154,8 @@ def get_configs() -> Dict[str, Dict[str, Any]]:
         key1: {
             key2: {
                 ConfigField.CONFIG_FIELD_DEFAULT_VALUE: value2,
-                ConfigField.CONFIG_FIELD_TYPE: CONFIG_DESCRIPTION[key1][key2],
-                ConfigField.CONFIG_FIELD_DESCRIPTION: CONFIG_TYPE[key1][key2],
+                ConfigField.CONFIG_FIELD_TYPE: CONFIG_TYPE[key1][key2],
+                ConfigField.CONFIG_FIELD_DESCRIPTION: CONFIG_DESCRIPTION[key1][key2],
             }
             for key2, value2 in value1.items()
         }
